@@ -25,12 +25,12 @@ with open(path, encoding="utf8") as f:
 
 @print_result
 def f1(arg):
-    return list(unique(list(field(arg, "job-name")), ignore_case=True))
+    return sorted(unique(list(field(arg, "job-name")), ignore_case=True), key = lambda x: str(x).lower())
 
 
 @print_result
 def f2(arg):
-    return list(filter(lambda _: "Программист" in _, arg))
+    return list(filter(lambda x: "программист" in x.lower(), arg))
 
 
 @print_result

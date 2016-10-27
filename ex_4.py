@@ -27,3 +27,9 @@ test_1()
 test_2()
 test_3()
 test_4()
+
+@print_result
+def test_5(a=0, b=0, c=0):
+    return a+c
+
+test_5(2, c=2)

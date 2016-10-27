@@ -9,7 +9,7 @@ goods = [
     {'title': 'Вешалка для одежды', 'price': 800, 'color': 'white'}
 ]
 
-print([x for x in field(goods, 'price')])
+print([x for x in field(goods, 'price1')])
 print([x for x in field(goods, 'title', 'price')])
 print([x for x in gen_random(1, 10, 7)])
 # Реализация задания 1

@@ -38,12 +38,9 @@
 
 
 def print_result(func):
-    def decorated(*args):
+    def decorated(*args, **kwargs):
         print(func.__name__)
-        if len(args) > 0:
-            res = func(args[0])
-        else:
-            res = func()
+        res = func(*args, **kwargs)
         if type(res) is list:
             print("\n".join(map(str, res)))
         elif type(res) is dict:
